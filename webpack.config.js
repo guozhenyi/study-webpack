@@ -31,7 +31,13 @@ module.exports = {
 
     module: {
         rules: [
-     
+            {
+                test: /(\.js)$/,
+                exclude: /nodel_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            }
         ]
     }
 
