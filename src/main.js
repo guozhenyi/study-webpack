@@ -1,6 +1,8 @@
 
 import Greet from './Greeter'
 
+import './assets/main.css'
+
 
 let root = document.querySelector('#root');
 root.appendChild(Greet())
