@@ -1,7 +1,10 @@
 
 const path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 
 module.exports = {
     // 模式 production development
@@ -29,6 +32,18 @@ module.exports = {
     },
 
     plugins: [
+        /**
+         * 所有在 webpack's output.path 目录下的文件将会被删除一次,该目录本身不会被删除。
+         * 如果使用 webpack 4+ 的默认配置，所有在 <PROJECT_DIR>/dist/ 目录下的将会被删除。
+         * Use cleanOnceBeforeBuildPatterns to override this behavior.
+         *
+         * During rebuilds, all webpack assets that are not used anymore
+         * will be removed automatically.
+         * https://github.com/johnagan/clean-webpack-plugin
+         */
+        new CleanWebpackPlugin(),
+
+
         // 该插件可以把index.html打包到bundle.js文件所属目录，跟着bundle走
         // 同时也会自动在index.html中注入script引用链接，并且引用的资源名称，也取决于打包的文件名称
         new HtmlWebpackPlugin({
