@@ -8,11 +8,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     // 模式 production development
-    mode: 'development', 
+    mode: 'development',
     // 调试选项 source-map cheap-module-source-map eval-source-map cheap-module-eval-source-map
     // devtool: 'source-map',
-    
-    entry: './src/main.js',
+
+    entry: './src/index.js',
     output: {
         // 输出文件目录，需要绝对路径
         path: path.resolve(__dirname, 'dist'),
@@ -47,7 +47,7 @@ module.exports = {
         // 该插件可以把index.html打包到bundle.js文件所属目录，跟着bundle走
         // 同时也会自动在index.html中注入script引用链接，并且引用的资源名称，也取决于打包的文件名称
         new HtmlWebpackPlugin({
-            title: 'cms',
+            title: 'Study Webpack',
             template: './public/index.html', // 模版位置
             // filename: 'public/index.html', // 文件名
 
@@ -66,7 +66,7 @@ module.exports = {
         rules: [
             {
                 test: /(\.js)$/,
-                exclude: /nodel_modules/,
+                exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
                 }

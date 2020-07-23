@@ -2,12 +2,11 @@
   "name": "webpack-study",
   "version": "0.1.0",
   "description": "webpack study",
-  "main": "main.js",
+  "main": "index.js",
   "author": "gzy",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "babel-loader": "^8.1.0",
