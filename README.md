@@ -1,3 +1,12 @@
+- [Study Webpack](#study-webpack)
+  - [准备](#准备)
+  - [安装 webpack 包](#安装-webpack-包)
+  - [实现 html 打包](#实现-html-打包)
+  - [配置用 babel 编译 JavaScript](#配置用-babel-编译-javascript)
+  - [配置 webpack 能打包 css](#配置-webpack-能打包-css)
+  - [配置 webpack 支持 css 模块化](#配置-webpack-支持-css-模块化)
+  - [配置 webpack 支持 css 拆分](#配置-webpack-支持-css-拆分)
+
 # Study Webpack
 
 一步一步学习 webpack 。
@@ -18,7 +27,7 @@ yarn add --dev webpack
 yarn add --dev webpack-cli webpack-dev-server
 ```
 
-## 1. 实现 html 打包
+## 实现 html 打包
 
 安装 webpack 插件
 
@@ -107,7 +116,7 @@ serve ./dist
 
 ![webpack demo 01](./resources/images/demo-01.png)
 
-## 2. 配置用 babel 编译 JavaScript
+## 配置用 babel 编译 JavaScript
 
 大部分浏览器已经支持 ES5，更现代的浏览器也都支持 ES2015(ES6)。
 当我们编写javascript时，可以用更先进的 ES2015 规范去写。
@@ -164,7 +173,7 @@ module.exports = {
 }
 ```
 
-## 2. 配置 webpack 能打包 css
+## 配置 webpack 能打包 css
 
 安装 css 处理包
 
@@ -235,7 +244,7 @@ yarn webpack
 serve ./dist
 ```
 
-## 3. 配置 webpack 支持 css 模块化
+## 配置 webpack 支持 css 模块化
 
 修改 webpack.config.js 以支持 css modules
 
@@ -311,7 +320,7 @@ yarn webpack
 ![webpack demo 02](./resources/images/demo-02.png)
 
 
-## 4. 配置 webpack 支持 css 模块化
+## 配置 webpack 支持 css 拆分
 
 
 我们发现 index.css 里的样式全部内联到了 index.html 中。
